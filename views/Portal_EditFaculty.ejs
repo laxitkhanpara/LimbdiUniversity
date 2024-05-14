@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ('./UserPortal/vendar/Metahead.ejs') %>
+
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <%- include ('./UserPortal/vendar/sidebar.ejs') %>
+            <!--  Sidebar End -->
+            <!--  Main wrapper -->
+            <div class="body-wrapper">
+                <!--  Header Start -->
+                <%- include ('./UserPortal/vendar/menubar.ejs') %>
+                    <!--  Header End -->
+                    <div class="container-fluid">
+                        <!--  Row 1 -->
+                        <form action="/faculty/edit/" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!-- Yearly Breakup -->
+
+                                            <div class="card overflow-hidden">
+                                                <div class="card-body p-4 text-start">
+
+                                                    <img src="../upload/<%=faculty[0].Faculty_Image%>" alt=""
+                                                        width="150" height="150" class="rounded-circle">
+                                                    <br>
+                                                    <br>
+                                                    <hr>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">faculty
+                                                            Image</label>
+                                                        <input type="file" name="Faculty_Image" class="form-control">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">faculty
+                                                            Id</label>
+                                                        <input type="text" value="<%=faculty[0]._id%>" name="Faculty_ID"
+                                                            required class="form-control" id="exampleInputEmail1">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Email
+                                                            address</label>
+                                                        <input type="email" required class="form-control"
+                                                            value="<%=faculty[0].Email%>" name="Email"
+                                                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Mobile Number
+                                                        </label>
+                                                        <input type="number" value="<%=faculty[0].Mobile_Number%>"
+                                                            name="Mobile_Number" required class="form-control"
+                                                            id="exampleInputEmail1">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputPassword1"
+                                                            class="form-label">Password</label>
+                                                        <input value="<%=faculty[0].password%>" type="password" required
+                                                            class="form-control" name="password"
+                                                            id="exampleInputPassword1">
+                                                    </div>
+    
+                                                   
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 d-flex align-items-strech">
+                                    <div class="card w-100">
+                                        <div class="card-body">
+
+                                            <h5 class="card-title fw-semibold mb-4">Other information</h5>
+
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">First Name
+                                                    </label>
+                                                    <input type="text" name="FirstName" value=<%=faculty[0].FirstName%>
+                                                    required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Middle Name
+                                                    </label>
+                                                    <input type="text" name="MiddelName"
+                                                        value=<%=faculty[0].MiddelName%> required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Last Name
+                                                    </label>
+                                                    <input type="text" name="LastName" value=<%=faculty[0].LastName%>
+                                                    required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Date of Birth
+                                                    </label>
+                                                        <input type="Date" name="DOB" value=<%=faculty[0].DOB.toISOString().split('T')[0]%>
+                                                        required class="form-control"
+                                                        id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Gender
+                                                    </label>
+                                                    <br>
+                                                    <select required name="Gender" class="form-control">
+                                                        <option Default value=<%=faculty[0].Gender%>>
+                                                            <%=faculty[0].Gender%>
+                                                        </option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Nationality
+                                                    </label>
+                                                    <input type="text" name="Nationality"
+                                                        value=<%=faculty[0].Nationality%> required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3 ms-5 mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Address
+                                                </label>
+                                                <input type="text" name="Address" value=<%=faculty[0].Address%> required
+                                                class="form-control"
+                                                id="exampleInputEmail1">
+                                            </div>
+                                            <hr>
+                                             <!-- Professional Information -->
+                                             <h5 class="mb-3">Professional Information</h5>
+                                             <div class="d-flex flex-row justify-content-evenly">
+                                                 <div class="col-3 mb-3">
+                                                     <label for="exampleInputEmail1" class="form-label">Subject Area
+                                                     </label>
+                                                     <input type="text" name="Subject_Area" value=<%=faculty[0].Subject_Area%> value="NA" class="form-control"
+                                                         id="exampleInputEmail1">
+                                                 </div>
+                                                 <div class="col-3 mb-3">
+                                                     <label for="exampleInputEmail1"
+                                                         class="form-label">Qualifications
+                                                     </label>
+                                                     <input type="text" name="Educational_Qualifications" value=<%=faculty[0].Educational_Qualifications%> value="NA" class="form-control"
+                                                         id="exampleInputEmail1">
+                                                 </div>
+                                               
+                                             </div>
+                                             <hr>
+                                            <!-- Emergency  Information -->
+                                            <h5 class="mb-3">Emergency Information</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Contact Name
+                                                    </label>
+                                                    <input type="text" name="Emergency_Cont_Name"
+                                                        value=<%=faculty[0].Emergency_Cont_Name%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Relationship
+                                                    </label>
+                                                    <input type="text" name="Relationship_Faculty"
+                                                        value=<%=faculty[0].Relationship_Faculty%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Contact Number
+                                                    </label>
+                                                    <input type="text" name="Contact_Phone_Number"
+                                                        value=<%=faculty[0].Contact_Phone_Number%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- Medical Information -->
+                                            <h5 class="mb-3">Medical Information</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Allergies
+                                                    </label>
+                                                    <input type="text" name="Allergies" value=<%=faculty[0].Allergies%>
+                                                    class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Chronic
+                                                        Conditions
+                                                    </label>
+                                                    <input type="text" name="Chronic_Conditions"
+                                                        value=<%=faculty[0].Chronic_Conditions%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Medications
+                                                    </label>
+                                                    <input type="text" name="Medications"
+                                                        value=<%=faculty[0].Medications%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <hr>
+                                            <!-- Achievements -->
+                                            <h5 class="mb-3">Achievements</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Awards
+                                                    </label>
+                                                    <input type="text" name="Awards" value=<%=faculty[0].Awards%>
+                                                    class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Certifications
+                                                    </label>
+                                                    <input type="text" name="Certifications"
+                                                        value=<%=faculty[0].Certifications%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                
+                                                <hr>
+                                                <div class="col-3 mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Additional Notes
+                                                        </label>
+                                                        <input type="text" required name="Additional_Notes" value=<%=faculty[0].Additional_Notes%> class="form-control"
+                                                            id="exampleInputEmail1">
+                                                    </div>
+                                            </div>
+
+                                            <hr>
+                                            <!-- //Family Information -->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+            </div>
+    </div>
+    <%- include ('./UserPortal/vendar/scripts.ejs') %>
+</body>
+
+</html>

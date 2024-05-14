@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ('./UserPortal/vendar/Metahead.ejs') %>
+
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <%- include ('./UserPortal/vendar/sidebar.ejs') %>
+            <!--  Sidebar End -->
+            <!--  Main wrapper -->
+            <div class="body-wrapper">
+                <!--  Header Start -->
+                <%- include ('./UserPortal/vendar/menubar.ejs') %>
+                    <!--  Header End -->
+                    <div class="container-fluid">
+                        <!--  Row 1 -->
+                        <div class="row">
+                            <div class="col-lg-8 d-flex align-items-strech">
+                                <div class="card w-100">
+                                    <div class="card-body">
+
+                                        <div class="card w-100">
+                                            <div class="card-body p-4">
+                                                <h5 class="card-title fw-semibold mb-4">Current Batch</h5>
+                                                <div class="table-responsive">
+                                                    <table class="table text-nowrap mb-0 align-middle">
+                                                        <thead class="text-dark fs-4">
+                                                            <tr>
+                                                                <th class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">No</h6>
+                                                                </th>
+                                                                <th class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">Year</h6>
+                                                                </th>
+                                                                <th class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">TotalStudent</h6>
+                                                                </th>
+                                                                <th class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">More</h6>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">1</h6>
+                                                                </td>
+                                                                <td class="border-bottom-0">
+                                                                    <p class="mb-0 fw-normal">1 year</p>
+                                                                </td>
+                                                                <td class="border-bottom-0">
+                                                                    <p class="mb-0 fw-normal">
+                                                                        <%= firstyear.length %>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-primary btn-sm"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modelyear1">
+                                                                        More Details
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">2</h6>
+                                                                </td>
+                                                                <td class="border-bottom-0">
+                                                                    <p class="mb-0 fw-normal">2 year</p>
+                                                                </td>
+                                                                <td class="border-bottom-0">
+                                                                    <p class="mb-0 fw-normal">
+                                                                        <%= secondyear.length %>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-primary btn-sm"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modelyear2">
+                                                                        More Details
+                                                                    </button>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="border-bottom-0">
+                                                                    <h6 class="fw-semibold mb-0">3</h6>
+                                                                </td>
+                                                                <td class="border-bottom-0">
+                                                                    <p class="mb-0 fw-normal">3 year</p>
+                                                                </td>
+                                                                <td class="border-bottom-0">
+                                                                    <p class="mb-0 fw-normal">
+                                                                        <%= thirdyear.length %>
+                                                                    </p>
+                                                                </td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-primary btn-sm"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modelyear3">
+                                                                        More Details
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- other batch -->
+                                        <div class="card-body p-4">
+                                            <h5 class="card-title fw-semibold mb-4">Other Batch</h5>
+                                            <div class="table-responsive">
+                                                <table class="table text-nowrap mb-0 align-middle">
+                                                    <thead class="text-dark fs-4">
+                                                        <tr>
+                                                            <th class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-0">No</h6>
+                                                            </th>
+                                                            <th class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-0">Year</h6>
+                                                            </th>
+                                                            <th class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-0">TotalStudent</h6>
+                                                            </th>
+                                                            <th class="border-bottom-0">
+                                                                <h6 class="fw-semibold mb-0">More</h6>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <% var x=1 %>
+                                                            <% AllBatch.forEach((item)=>{ %>
+                                                                <tr>
+                                                                    <td class="border-bottom-0">
+                                                                        <h6 class="fw-semibold mb-0">
+                                                                            <%= x++ %>
+                                                                        </h6>
+                                                                    </td>
+                                                                    <td class="border-bottom-0">
+                                                                        <p class="mb-0 fw-normal">
+                                                                            <%=item._id%>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="border-bottom-0">
+                                                                        <p class="mb-0 fw-normal">
+                                                                            <%=item.students.length%>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td>
+                                                                        <!-- <button type="button"
+                                                                            class="btn btn-primary btn-sm">More
+                                                                            Details</button> -->
+                                                                            <button type="button" class="btn btn-primary btn-sm"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modelyear<%=item._id%>">
+                                                                        More Details
+                                                                    </button>
+                                                                    </td>
+                                                                </tr>
+                                                                <% }) %>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- Yearly Breakup -->
+                                        <div class="card overflow-hidden">
+                                            <div class="card-header text-bg-primary h3">
+                                                Total student
+                                            </div>
+                                            <div class="card-body p-4 text-center">
+                                                <div class="card">
+                                                    <div class="card-header text-bg-primary h3">
+                                                        Total
+                                                    </div>
+                                                    <div class="card-body text-bg-light-primary">
+                                                        <h1><%=allStudent.length%></h1>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card">
+                                                    <div class="card-header text-bg-primary h3">
+                                                        1st year
+                                                    </div>
+                                                    <div class="card-body text-bg-light-primary">
+                                                        <h1><%= firstyear.length %></h1>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header text-bg-primary h3">
+                                                        2st year
+                                                    </div>
+                                                    <div class="card-body text-bg-light-primary">
+                                                        <h1><%secondyear.length%></h1>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card">
+                                                    <div class="card-header text-bg-primary h3">
+                                                        3st year
+                                                    </div>
+                                                    <div class="card-body text-bg-light-primary">
+                                                        <h1><%thirdyear.length%></h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+    </div>
+    <!-- models -->
+    <!-- year1 -->
+    <div class="modal fade" id="modelyear1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">First Year Student Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table text-nowrap mb-0 align-middle">
+                            <thead class="text-dark fs-4">
+                                <tr>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">No</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Image</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Student ID</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Name</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Contact</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Attendance</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Gender</h6>
+                                    </th>
+
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Edit</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Delete</h6>
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var i=1 %>
+                                    <% firstyear.forEach((item)=>{ %>
+                                        <tr>
+                                            <td class="border-bottom-0">
+                                                <h6 class="fw-semibold mb-0">
+                                                    <%=i++%>
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35"
+                                                    height="35" class="rounded-circle">
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.FirstName%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.LastName%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Email%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Mobile_Number%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Gender%>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary btn-sm m-1"
+                                                    href="/studentedit/<%=item.id%>">Edit</a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger btn-sm m-1"
+                                                    href="/studentdelete/<%=item.id%>">Delete</a>
+                                            </td>
+                                            
+                                        </tr>
+                                        <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- year2 -->
+    <div class="modal fade" id="modelyear2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Second Year Student Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table text-nowrap mb-0 align-middle">
+                            <thead class="text-dark fs-4">
+                                <tr>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">No</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Image</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Student ID</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Name</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Contact</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Attendance</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Gender</h6>
+                                    </th>
+
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Edit</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Delete</h6>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var j=1 %>
+                                    <% secondyear.forEach((item)=>{ %>
+                                        <tr>
+                                            <td class="border-bottom-0">
+                                                <h6 class="fw-semibold mb-0">
+                                                    <%=j++%>
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35"
+                                                    height="35" class="rounded-circle">
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.FirstName%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.LastName%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Email%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Mobile_Number%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Gender%>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary btn-sm m-1"
+                                                    href="/student/edit/<%=item.id%>">Edit</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger btn-sm m-1"
+                                                    href="/studentdelete/<%=item.id%>">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- year3 -->
+    <div class="modal fade" id="modelyear3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Third Year Student Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table text-nowrap mb-0 align-middle">
+                            <thead class="text-dark fs-4">
+                                <tr>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">No</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Image</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Student ID</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Name</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Contact</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Attendance</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Gender</h6>
+                                    </th>
+
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Edit</h6>
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var k=1 %>
+                                    <% thirdyear.forEach((item)=>{ %>
+                                        <tr>
+                                            <td class="border-bottom-0">
+                                                <h6 class="fw-semibold mb-0">
+                                                    <%=k++%>
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35"
+                                                    height="35" class="rounded-circle">
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.FirstName%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.LastName%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Email%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Mobile_Number%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item.Gender%>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary btn-sm m-1"
+                                                    href="/student/edit/<%=item.id%>">Edit</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger btn-sm m-1"
+                                                    href="/studentdelete/<%=item.id%>">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% AllBatch.forEach((item)=>{ %>
+    <!-- other student -->
+    <div class="modal fade" id="modelyear<%=item._id%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><%=item._id%> Year Student Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table text-nowrap mb-0 align-middle">
+                            <thead class="text-dark fs-4">
+                                <tr>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">No</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Image</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Student ID</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Name</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Contact</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Attendance</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Gender</h6>
+                                    </th>
+
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Edit</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Delete</h6>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var i=1 %>
+                                    <% item.students.forEach((item2)=>{ %>
+                                        <tr>
+                                            <td class="border-bottom-0">
+                                                <h6 class="fw-semibold mb-0">
+                                                    <%=i++%>
+                                                </h6>
+                                            </td>
+                                            <td>
+                                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35"
+                                                    height="35" class="rounded-circle">
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.FirstName%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.LastName%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.Email%>
+                                                </p>
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.Mobile_Number%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.Student_ID%>
+                                                </p>
+                                            </td>
+                                            <td class="border-bottom-0">
+                                                <p class="mb-0 fw-normal">
+                                                    <%=item2.Gender%>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary btn-sm m-1"
+                                                    href="/studentedit/<%=item2.id%>">Edit</a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger btn-sm m-1"
+                                                    href="/studentdelete/<%=item2.id%>">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+    <%- include ('./UserPortal/vendar/scripts.ejs') %>
+</body>
+
+</html>

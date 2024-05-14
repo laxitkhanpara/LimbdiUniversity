@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ('./UserPortal/vendar/Metahead.ejs') %>
+
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        <%- include ('./UserPortal/vendar/sidebar.ejs') %>
+            <!--  Sidebar End -->
+            <!--  Main wrapper -->
+            <div class="body-wrapper">
+                <!--  Header Start -->
+                <%- include ('./UserPortal/vendar/menubar.ejs') %>
+                    <!--  Header End -->
+                    <div class="container-fluid">
+                        <!--  Row 1 -->
+                        <form action="/user/edit/" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!-- Yearly Breakup -->
+
+                                            <div class="card overflow-hidden">
+                                                <div class="card-body p-4 text-start">
+
+                                                    <img src="../upload/<%=user.Student_Image%>" alt=""
+                                                        width="150" height="150" class="rounded-circle">
+                                                    <br>
+                                                    <br>
+                                                    <hr>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Student
+                                                            Image</label>
+                                                        <input readonly type="file" name="Student_Image" class="form-control">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Student
+                                                            Id</label>
+                                                        <input readonly type="text" value="<%=user._id%>" name="Student_ID"
+                                                            required class="form-control" id="exampleInputEmail1">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Email
+                                                            address</label>
+                                                        <input readonly type="email" required class="form-control"
+                                                            value="<%=user.Email%>" name="Email"
+                                                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Mobile Number
+                                                        </label>
+                                                        <input readonly type="number" value="<%=user.Mobile_Number%>"
+                                                            name="Mobile_Number" required class="form-control"
+                                                            id="exampleInputEmail1">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputPassword1"
+                                                            class="form-label">Password</label>
+                                                        <input readonly value="<%=user.password%>" type="password" required
+                                                            class="form-control" name="password"
+                                                            id="exampleInputPassword1">
+                                                    </div>
+                                                    <label for="exampleInputEmail1" class="form-label">Year
+                                                    </label>
+                                                    <br>
+                                                    <select required name="year" class="form-control">
+                                                        <option Default value="value=" <%=user.year%>>Select
+                                                        </option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+
+
+                                                    <label for="exampleInputEmail1" class="form-label">passout year
+                                                    </label>
+                                                    <select required name="passout_year" class="form-control">
+                                                        <option Default value=<%=user.passout_year%> >
+                                                            <%=user.passout_year%>
+                                                        </option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2023">2023</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2026">2026</option>
+                                                        <option value="2027">2027</option>
+                                                        <option value="2028">2028</option>
+                                                        <option value="2029">2029</option>
+                                                        <option value="2030">2030</option>
+                                                        <option value="2031">2031</option>
+                                                        <option value="2032">2032</option>
+                                                        <option value="2033">2033</option>
+                                                        <option value="2034">2034</option>
+                                                        <option value="2035">2035</option>
+                                                        <option value="2036">2036</option>
+                                                        <option value="2037">2037</option>
+                                                        <option value="2038">2038</option>
+                                                        <option value="2039">2039</option>
+                                                        <option value="2040">2040</option>
+                                                        <option value="2041">2041</option>
+                                                        <option value="2042">2042</option>
+                                                        <option value="2043">2043</option>
+                                                        <option value="2044">2044</option>
+                                                        <option value="2045">2045</option>
+                                                        <option value="2046">2046</option>
+                                                        <option value="2047">2047</option>
+                                                        <option value="2048">2048</option>
+                                                        <option value="2049">2049</option>
+                                                        <option value="2050">2050</option>
+                                                        <option value="2051">2051</option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 d-flex align-items-strech">
+                                    <div class="card w-100">
+                                        <div class="card-body">
+
+                                            <h5 class="card-title fw-semibold mb-4">Other information</h5>
+
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">First Name
+                                                    </label>
+                                                    <input readonly type="text" name="FirstName" value=<%=user.FirstName%>
+                                                    required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Middle Name
+                                                    </label>
+                                                    <input readonly type="text" name="MiddelName"
+                                                        value=<%=user.MiddelName%> required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Last Name
+                                                    </label>
+                                                    <input readonly type="text" name="LastName" value=<%=user.LastName%>
+                                                    required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Date of Birth
+                                                    </label>
+                                                        <input readonly type="Date" name="DOB" value=<%=user.DOB.toISOString().split('T')[0]%>
+                                                        required class="form-control"
+                                                        id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Gender
+                                                    </label>
+                                                    <br>
+                                                    <select required name="Gender" class="form-control">
+                                                        <option Default value=<%=user.Gender%>>
+                                                            <%=user.Gender%>
+                                                        </option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Nationality
+                                                    </label>
+                                                    <input readonly type="text" name="Nationality"
+                                                        value=<%=user.Nationality%> required class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3 ms-5 mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Address
+                                                </label>
+                                                <input readonly type="text" name="Address" value=<%=user.Address%> required
+                                                class="form-control"
+                                                id="exampleInputEmail1">
+                                            </div>
+                                            <hr>
+                                            <!-- Emergency  Information -->
+                                            <h5 class="mb-3">Emergency Information</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Contact Name
+                                                    </label>
+                                                    <input readonly type="text" name="Emergency_Cont_Name"
+                                                        value=<%=user.Emergency_Cont_Name%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Relationship
+                                                    </label>
+                                                    <input readonly type="text" name="Relationship_Student"
+                                                        value=<%=user.Relationship_Student%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Contact Number
+                                                    </label>
+                                                    <input readonly type="text" name="Contact_Phone_Number"
+                                                        value=<%=user.Contact_Phone_Number%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- Medical Information -->
+                                            <h5 class="mb-3">Medical Information</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Allergies
+                                                    </label>
+                                                    <input readonly type="text" name="Allergies" value=<%=user.Allergies%>
+                                                    class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Chronic
+                                                        Conditions
+                                                    </label>
+                                                    <input readonly type="text" name="Chronic_Conditions"
+                                                        value=<%=user.Chronic_Conditions%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Medications
+                                                    </label>
+                                                    <input readonly type="text" name="Medications"
+                                                        value=<%=user.Medications%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <hr>
+                                            <!-- Achievements -->
+                                            <h5 class="mb-3">Achievements</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Awards
+                                                    </label>
+                                                    <input readonly type="text" name="Awards" value=<%=user.Awards%>
+                                                    class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Certifications
+                                                    </label>
+                                                    <input readonly type="text" name="Certifications"
+                                                        value=<%=user.Certifications%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Scholarships
+                                                    </label>
+                                                    <input readonly type="text" name="Scholarships"
+                                                        value=<%=user.Scholarships%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+
+                                            <hr>
+                                            <!-- //Family Information -->
+                                            <h5 class="mb-3">Family Information</h5>
+                                            <div class="d-flex flex-row justify-content-evenly">
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Guardian Names
+                                                    </label>
+                                                    <input readonly type="text" name="Guardian_Names"
+                                                        value=<%=user.Guardian_Names%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Guardian Contact
+                                                    </label>
+                                                    <input readonly type="text" name="Guardian_Contact"
+                                                        value=<%=user.Guardian_Contact%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                                <div class="col-3 mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Additional_Notes
+                                                    </label>
+                                                    <input readonly type="text" name="Additional_Notes"
+                                                        value=<%=user.Additional_Notes%> class="form-control"
+                                                    id="exampleInputEmail1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+            </div>
+    </div>
+    <%- include ('./UserPortal/vendar/scripts.ejs') %>
+</body>
+
+</html>
