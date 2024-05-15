@@ -215,7 +215,13 @@ router.get("/AttendanceDetail", checkUserAuth, async (req, res) => {
           ];
       
           const result = await Attendance.aggregate(pipeline);
-          console.log('Present Percentage:', result[0].presentPercentage);
+          if (result.length < 1) {
+            result.push({ presentPercentage: 0 }); // Add a new object with the presentPercentage property
+          } else {
+            // If there are results, calculate the presentPercentage
+            result[0].presentPercentage = (result[0].presentCount / totalAttendanceCounts) * 100;
+          }
+          console.log('Present Percentage:', result[0]);
         if (UserType === 'Admin' || UserType === 'Faculty') {
             res.render("Portal_AttendanceDetail", { firstyear, secondyear, thirdyear, Fouryear, UserType, user, yearpresent, totalPresent, totalAttendanceByStudent, todaypresent1, todaypresent2, todaypresent3, todaypresent4,result })
         } else {
