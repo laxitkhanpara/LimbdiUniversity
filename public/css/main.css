@@ -5342,9 +5342,3 @@ dl.toggle.time-line:before {
 .footer-bottom .footer-social a:hover {
     background-color: #f7631b
 }
-
-.container-essentials{
-    display: flexbox;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-}
