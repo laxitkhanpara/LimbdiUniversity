@@ -14,6 +14,8 @@ const multer = require('multer');
 const path = require('path');
 const { log } = require('util');
 const nodemailer = require("nodemailer");
+const fs = require('fs');
+
 
 //================Certificate upload===============================
 
@@ -164,6 +166,16 @@ router.get('/logOut', async (req, res) => {
 
     router.get('/Blogdelete/:id', async (req, res) => {
         try {
+            const already = await Blogs.findById(req.params.id);
+            if (already.length > 0) {
+                fs.unlink(`./upload"${already.BlogImage}`, (err) => {
+                    if (err) {
+                        console.error('Error deleting file:', err);
+                        return;
+                    }
+                    console.log('File deleted successfully.');
+                });
+            }
             await Blogs.findByIdAndDelete(req.params.id)
             res.redirect('/AddBlog')
         } catch (error) {
@@ -172,6 +184,18 @@ router.get('/logOut', async (req, res) => {
     })
     router.get('/eventdelete/:id', async (req, res) => {
         try {
+            console.log(123);
+            const already = await Events.findById(req.params.id);
+            console.log(already);
+            if (already.length > 0) {
+                fs.unlink(`./upload"${already.EventImage}`, (err) => {
+                    if (err) {
+                        console.error('Error deleting file:', err);
+                        return;
+                    }
+                    console.log('File deleted successfully.');
+                });
+            }
             await Events.findByIdAndDelete(req.params.id)
             res.redirect('/AddBlog')
         } catch (error) {
