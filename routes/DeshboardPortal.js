@@ -22,13 +22,15 @@ router.get("/Dashboard", checkUserAuth, async (req, res) => {
         } else if (UserType === "Faculty") {
             timetable = await TimeTableFacultys.find({ Faculty_ID: user.Faculty_ID })
         }
-        
+        const totalfaculty = await FacultyDetails.find()
+            const totalstudent = await StudentDetails.find()
+        if (UserType == 'Admin'){
+            
+            res.render("Portal_Dashboard", { UserType, user,totalfaculty,totalstudent })
+        }
         if (timetable.length == 0 ) {
             timetable.push({ TimeTable: 0 }); // Add a new object with the presentPercentage property
         }
-        console.log("timetable:",timetable);
-        const totalfaculty = await FacultyDetails.find()
-        const totalstudent = await StudentDetails.find()
         res.render("Portal_Dashboard", { UserType, user, timetable,totalfaculty,totalstudent })
     } catch (error) {
         console.log(error);

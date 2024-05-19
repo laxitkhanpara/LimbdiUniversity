@@ -101,7 +101,7 @@ const upload = multer({ storage: storage });
     })
 
     //Delete Faculty
-    router.post('/Facultydelete/:id',async (req,res)=>{
+    router.get('/Facultydelete/:id',async (req,res)=>{
         try{
             await FacultyDetails.findByIdAndDelete(req.params.id)
             res.redirect('/FacultyDetails')

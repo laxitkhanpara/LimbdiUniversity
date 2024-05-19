@@ -392,6 +392,20 @@ router.get('/nontech',async(req,res)=>{
         console.log(error);
     }
 }),
+router.get('/Ayur',async(req,res)=>{
+    try{
+        res.render('LimbdiAyurvedicCollege')
+    }catch (error) {
+        console.log(error);
+    }
+}),
+router.get('/nurse',async(req,res)=>{
+    try{
+        res.render('LimbdiNursingCollege')
+    }catch (error) {
+        console.log(error);
+    }
+}),
 
 //===========export router=============
 module.exports = router;

@@ -81,7 +81,7 @@ const upload = multer({ storage: storage });
             ]);
             console.log(AllBatch)
 
-            res.render("Portal_Studants", { allStudent, firstyear, secondyear, thirdyear, AllBatch, UserType, user })
+            res.render("Portal_Studants", { allStudent, firstyear, secondyear, thirdyear, AllBatch, UserType, user,fouryear })
         } catch (error) {
             console.log(error);
         }
