@@ -162,7 +162,7 @@ router.get('/logOut', async (req, res) => {
         }
     })
 
-    router.post('/Blogdelete/:id', async (req, res) => {
+    router.get('/Blogdelete/:id', async (req, res) => {
         try {
             await Blogs.findByIdAndDelete(req.params.id)
             res.redirect('/AddBlog')
@@ -170,7 +170,7 @@ router.get('/logOut', async (req, res) => {
             console.log(error);
         }
     })
-    router.post('/eventdelete/:id', async (req, res) => {
+    router.get('/eventdelete/:id', async (req, res) => {
         try {
             await Events.findByIdAndDelete(req.params.id)
             res.redirect('/AddBlog')
