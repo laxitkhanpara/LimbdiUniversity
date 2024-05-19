@@ -156,7 +156,7 @@ router.get('/logOut', async (req, res) => {
             const NewBlog = new Blogs({ BlogImage, BlogTitle, BlogContent })
             console.log("NewBlog: ", NewBlog);
             NewBlog.save();
-            res.render("/blog-single")
+            res.redirect("/AddBlog")
         } catch (error) {
             console.log(error);
         }
@@ -205,7 +205,7 @@ router.get('/logOut', async (req, res) => {
             const NewEvent = new Events({ EventImage, EventTitle, EventContent, EventDate })
             console.log("NewEvent:- ", NewEvent);
             NewEvent.save();
-            res.render("/events")
+            res.redirect("/AddBlog")
         } catch (error) {
             console.log(error);
         }

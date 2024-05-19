@@ -8,9 +8,6 @@ const { StudentDetails } = require('../models/studentSchema')
 const { FacultyDetails } = require('../models/feacultySchema')
 const { TimeTableFacultys, YearTimeTables } = require('../models/TimeTableSchema')
 
-
-
-
 router.get("/Dashboard", checkUserAuth, async (req, res) => {
     try {
         const user = req.user
