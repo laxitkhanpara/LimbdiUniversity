@@ -35,6 +35,7 @@ const upload = multer({ storage: storage });
             const firstyear = await StudentDetails.find({ year: "1" })
             const secondyear = await StudentDetails.find({ year: "2" })
             const thirdyear = await StudentDetails.find({ year: "3" })
+            const fouryear = await StudentDetails.find({ year: "4" })
             const user = req.user
             const UserType = req.UserType
             const AllBatch = await StudentDetails.aggregate([
@@ -142,7 +143,7 @@ const upload = multer({ storage: storage });
     })
 
     //Delete student
-    router.post('/studentdelete/:id', async (req, res) => {
+    router.get('/studentdelete/:id', async (req, res) => {
         try {
             await StudentDetails.findByIdAndDelete(req.params.id)
             res.redirect('/StudentDetails')
