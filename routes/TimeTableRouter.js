@@ -51,7 +51,6 @@ router.post("/AddTimeTable", upload.single('TimeTable'), async (req, res) => {
         if (['1', '2', '3', '4'].includes(Faculty_ID)) {
 
             const already = await YearTimeTables.find({ "year": Faculty_ID })
-            console.log(already[0].TimeTable);
             if (already.length > 0) {
                 fs.unlink(`./upload"${already[0].TimeTable}`, (err) => {
                     if (err) {
@@ -103,10 +102,9 @@ router.get("/Essentials", checkUserAuth, async (req, res) => {
     }
 })
 
-router.get("/getEssentials", checkUserAuth, async (req, res) => {
+router.get("/getEssentials", async (req, res) => {
     try {
-        const user = req.user
-        const UserType = req.UserType
+      
         const Essentials = await Essential.find();
 console.log("essentials:",Essentials);
         res.render("essentials", { Essentials})

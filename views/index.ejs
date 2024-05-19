@@ -39,61 +39,7 @@
 <%- include ('./UserPortal/vendar/HeaderLanding.ejs') %>
 
 <body>
-	<header id="header" id="home">
-		<div class="header-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
-						<ul>
-							<li><a target="_self" href="#"><i class="fa-brands fa-facebook"></i></a></li>
-							<li><a target="_self" href="#"><i class="fa-brands fa-twitter"></i></a></li>
-							<li><a target="_self" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-							<li><a target="_self" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-						</ul>
-					</div>
-					<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-						<a href="#"><span class="lnr lnr-phone-handset"></span> <span
-								class="text"><i class="fa-solid fa-phone mx-1"></i> +953 012 3654 896</span></a>
-						<a href="mailto:#"><span class="lnr lnr-envelope"></span> <span
-								class="text"><i class="fa-solid fa-envelope mx-1"></i> support@university.com</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container main-menu">
-			<div class="row align-items-center justify-content-between d-flex">
-				<div id="logo">
-					<a href="index.html"><img src="/img/image.png" alt="" title="" width="115"
-						style="border-radius: 50%; background: #fff;" /></a>
-				</div>
-				<nav id="nav-menu-container">
-					<ul class="nav-menu">
-						<li><a target="_self" href="/home" target="_blank">Home</a></li>
-						<li><a target="_self" href="/about" target="_blank">About</a></li>
-						<li><a target="_self" href="/courses" target="_blank">Courses</a></li>
-						<li><a target="_self" href="/event" target="_blank">Events</a></li>
-						<li><a target="_self" href="/gallery" target="_blank">Gallery</a></li>
-						<li><a target="_self" href="/Blog" target="_blank">Blog Single</a></li>
-						
-						<li class="menu-has-children"><a href="">Faculties</a>
-							<ul>
-								<li><a target="_self" href="/courses">Courses</a></li>
-								<li><a target="_self" href="/hospital">Hospital Staff</a></li>
-								<li><a target="_self" href="/nontech">Non-Teaching Staff</a></li>
-								<li class="menu-has-children"><a href="">Teaching Staff</a>
-									<ul>
-										<li><a target="_self" href="#">External Faculties</a></li>
-										<li><a target="_self" href="#">Professors</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a target="_self" href="/Contact" target="_blank">Contact</a></li>
-					</ul>
-				</nav><!-- #nav-menu-container -->
-			</div>
-		</div>
-	</header><!-- #header -->
+	<%- include ('./UserPortal/vendar/HeaderLanding.ejs') %>
 
 	<!-- start banner Area -->
 	<section class="banner-area relative" id="home">
@@ -1099,83 +1045,7 @@
 	<!-- End cta-two Area -->
 
 	<!-- start footer Area -->
-	<footer class="footer-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h4>Libraries</h4>
-						<ul>
-							<li><a target="_self" href="#">Homoeopathic Books</a></li>
-							<li><a target="_self" href="#">Allied Books</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h4>Quick links</h4>
-						<ul>
-							<li><a target="_self" href="#">Ayush Ministry</a></li>
-							<li><a target="_self" href="#">National Council of Homoeopathy</a></li>
-							<li><a target="_self" href="#">Central Council of Homoeopathy</a></li>
-							<li><a target="_self" href="#">Vigilance Complaint Information Management System</a></li>
-							<li><a target="_self" href="/getEssentials">Essentials Of Collage</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h4>Features</h4>
-						<ul>
-							<li><a target="_self" href="#">Hostel Facility</a></li>
-							<li><a target="_self" href="#">Canteen Facility</a></li>
-							<li><a target="_self" href="#">Garden & Landscape</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4  col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h4>Need Help?</h4>
-						<p>Ask your Doubts</p>
-						<div class="" id="mc_embed_signup">
-							<form target="_blank"
-								action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								method="get">
-								<div class="input-group">
-									<input type="text" class="form-control" name="EMAIL"
-										placeholder="Enter Email Address" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Enter Email Address '" required="" type="email">
-									<div class="input-group-btn">
-										<button class="btn btn-default" type="submit">
-											<span class="lnr lnr-arrow-right"></span>
-										</button>
-									</div>
-									<div class="info"></div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom row align-items-center justify-content-between">
-				<p class="footer-text m-0 col-lg-6 col-md-12">
-
-					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
-						class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Aagam</a> &amp;
-					distributed by <a href="" target="_blank">Rayq</a>
-					<li><a target="_self" href="/login" target="_blank">.</a></li>
-
-				</p>
-				<div class="col-lg-6 col-sm-12 footer-social">
-					<a href="#"><i class="fa-brands fa-facebook"></i></a>
-					<a href="#"><i class="fa-brands fa-twitter"></i></a>
-					<a href="#"><i class="fa-brands fa-instagram"></i></a>
-					<a href="#"><i class="fa-brands fa-pinterest"></i></a>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<%- include ('./UserPortal/vendar/FotterofLending.ejs') %>
 	<!-- End footer Area -->
 
 
