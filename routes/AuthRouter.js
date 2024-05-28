@@ -260,7 +260,7 @@ router.get("/Ayurvadic", async (req, res) => {
 })
 router.get("/hospitalpage", async (req, res) => {
     try {
-        res.render("hospitalpage")
+        res.render("Hospitalpage")
     } catch (error) {
         console.log(error);
     }
