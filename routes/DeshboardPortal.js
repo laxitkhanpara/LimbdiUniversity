@@ -25,10 +25,10 @@ router.get("/Dashboard", checkUserAuth, async (req, res) => {
             
             res.render("Portal_Dashboard", { UserType, user,totalfaculty,totalstudent })
         }
-        if (timetable.length == 0 ) {
+        else if (timetable.length == 0 ) {
             timetable.push({ TimeTable: 0 }); // Add a new object with the presentPercentage property
+            res.render("Portal_Dashboard", { UserType, user, timetable,totalfaculty,totalstudent })
         }
-        res.render("Portal_Dashboard", { UserType, user, timetable,totalfaculty,totalstudent })
     } catch (error) {
         console.log(error);
     }
