@@ -243,7 +243,27 @@ router.get("/about", async (req, res) => {
         console.log(error);
     }
 })
-
+router.get("/limbdi", async (req, res) => {
+    try {
+        res.render("Coverpage")
+    } catch (error) {
+        console.log(error);
+    }
+})
+router.get("/Ayurvadic", async (req, res) => {
+    try {
+        res.render("Ayurvadica")
+    } catch (error) {
+        console.log(error);
+    }
+})
+router.get("/hospitalpage", async (req, res) => {
+    try {
+        res.render("hospitalpage")
+    } catch (error) {
+        console.log(error);
+    }
+})
 //-------contact
 router.get("/Contact", async (req, res) => {
     try {
