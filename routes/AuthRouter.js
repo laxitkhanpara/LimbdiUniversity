@@ -34,6 +34,13 @@ const upload = multer({ storage: storage });
 //signin
 router.get("/", async (req, res) => {
     try {
+        res.render("Coverpage")
+    } catch (error) {
+        console.log(error);
+    }
+})
+router.get("/limbdi", async (req, res) => {
+    try {
         res.render("index")
     } catch (error) {
         console.log(error);
@@ -243,13 +250,7 @@ router.get("/about", async (req, res) => {
         console.log(error);
     }
 })
-router.get("/limbdi", async (req, res) => {
-    try {
-        res.render("Coverpage")
-    } catch (error) {
-        console.log(error);
-    }
-})
+
 router.get("/Ayurvadic", async (req, res) => {
     try {
         res.render("Ayurvadica")
