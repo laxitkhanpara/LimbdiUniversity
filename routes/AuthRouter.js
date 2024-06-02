@@ -251,13 +251,35 @@ router.get("/about", async (req, res) => {
     }
 })
 
-router.get("/Ayurvadic", async (req, res) => {
+router.get("/Ayurvedic_index", async (req, res) => {
     try {
-        res.render("Ayurvadica")
+        res.render("Ayurvedic_index")
     } catch (error) {
         console.log(error);
     }
 })
+router.get("/Ayurvedic_courses", async (req, res) => {
+    try {
+        res.render("Ayurvedic_courses")
+    } catch (error) {
+        console.log(error);
+    }
+})
+router.get("/Ayurvedic_about", async (req, res) => {
+    try {
+        res.render("Ayurvedic_about")
+    } catch (error) {
+        console.log(error);
+    }
+})
+router.get("/Ayurvedic_contact", async (req, res) => {
+    try {
+        res.render("Ayurvedic_contact")
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 router.get("/hospitalpage", async (req, res) => {
     try {
         res.render("Hospitalpage")
