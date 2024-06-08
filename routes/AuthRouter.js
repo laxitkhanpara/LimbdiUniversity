@@ -2,11 +2,9 @@ const express = require('express')
 const app = express();
 require('dotenv').config();
 const router = express.Router();
-
 const { AdminUserauth, Blogs, Events } = require("../models/Auth")
 const { FacultyDetails } = require('../models/feacultySchema')
 const { StudentDetails } = require('../models/studentSchema')
-
 const bcrypt = require('bcrypt');
 const { checkUserAuth } = require("../middleware/authMiddleware")
 const { genrateTocken } = require('../middleware/jwtToken');

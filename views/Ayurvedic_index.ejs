@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../Ayurvedic/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../Ayurvedic/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../Ayurvedic/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../Ayurvedic/css/bootstrap.min.css" rel="stylesheet">
@@ -57,15 +57,23 @@
                 <a href="/Ayurvedic_index" class="nav-item nav-link active">Home</a>
                 <a href="/Ayurvedic_about" class="nav-item nav-link">About</a>
                 <a href="/Ayurvedic_courses" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown" style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">
+                <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Hospital</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="../Document/Staff List.xlsx" class="dropdown-item" download="Staff List.xlsx" style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">
-                    Hospital Staff List
-                </a>
-                        <a href="img/image1.jpg" class="dropdown-item"style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">Details of Outdoor Patient Department</a>
-                        <a href="img/image2.jpg" class="dropdown-item" style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">Details of Indoor Patient Department</a>
-                        <a href="img/image3.jpg" class="dropdown-item" style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">Details of Total Bed Occupied</a>
+                    <div
+                        class="dropdown-menu fade-down m-0 justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">
+                        <a href="../Document/Staff List.xlsx" class="dropdown-item" download="Staff List.xlsx"
+                            style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">
+                            Hospital Staff List
+                        </a>
+                        <a href="img/image1.jpg" class="dropdown-item"
+                            style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">Details
+                            of Outdoor Patient Department</a>
+                        <a href="img/image2.jpg" class="dropdown-item"
+                            style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">Details
+                            of Indoor Patient Department</a>
+                        <a href="img/image3.jpg" class="dropdown-item"
+                            style="justify-content: center; text-align: center; align-items: center; display: flex; margin: auto;">Details
+                            of Total Bed Occupied</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -187,7 +195,7 @@
                     <p class="mb-4">Ayurveda, often referred to as the "science of life," is one of the world's oldest
                         holistic healing systems. Originating in India over 5,000 years ago, Ayurveda emphasizes the
                         balance between mind, body, and spirit to achieve optimal health and wellness.</p>
-                    
+
                     <p>The Ayurvedic Medical College of Limbdi, located in the Surendranagar district of Gujarat, is a
                         renowned institution dedicated to the study and practice of Ayurveda. Established with the aim
                         of providing quality education in traditional Indian medicine, the college offers comprehensive
@@ -302,8 +310,10 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="img/course1.jpeg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px;">Read More</a>
+                                <button type="button" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                    Read More
+                                </button>
                                 <!-- <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a> -->
                             </div>
                         </div>
@@ -332,8 +342,10 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="img/course3.jpeg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px;">Read More</a>
+                                <button type="button" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    Read More
+                                </button>
                                 <!-- <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a> -->
                             </div>
                         </div>
@@ -362,8 +374,10 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="img/course2.jpeg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
-                                    style="border-radius: 30px;">Read More</a>
+                                <button type="button" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                    Read More
+                                </button>
                                 <!-- <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a> -->
                             </div>
                         </div>
@@ -488,8 +502,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="img/testimonial-1.jpg"
-                        style="width: 200px; height: 200px;">
+                    <img class="p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 200px; height: 200px;">
                     <h5 class="mb-0">Event Name</h5>
                     <p>Details</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -498,8 +511,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="img/testimonial-2.jpg"
-                        style="width: 200px; height: 200px;">
+                    <img class="p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 200px; height: 200px;">
                     <h5 class="mb-0">Event Name</h5>
                     <p>Details</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -508,8 +520,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="img/testimonial-3.jpg"
-                        style="width: 200px; height: 200px;">
+                    <img class="p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 200px; height: 200px;">
                     <h5 class="mb-0">Event Name</h5>
                     <p>Details</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -518,8 +529,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="p-2 mx-auto mb-3" src="img/testimonial-4.jpg"
-                        style="width: 200px; height: 200px;">
+                    <img class="p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 200px; height: 200px;">
                     <h5 class="mb-0">Event Name</h5>
                     <p>Details</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -547,7 +557,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Limbdi Ayurvedic Medical College and Hospital, Limbdi - Dhandhuka Highway, Limbdi</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Limbdi Ayurvedic Medical College and
+                        Hospital, Limbdi - Dhandhuka Highway, Limbdi</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 98988 47080</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>limbdihmc@gmail.com</p>
                     <div class="d-flex pt-2">
@@ -594,7 +605,8 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Limbdi Ayurvedic Medical College</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Limbdi Ayurvedic Medical College</a>, All Right
+                        Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">Aagam Shah</a><br><br>
@@ -613,6 +625,76 @@
         </div>
     </div>
     <!-- Footer End -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Rog-Nidan Evam</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    o	The Department of Rog-Nidan Evam Vikriti Vigyan focuses on the diagnosis, understanding, and management of diseases according to Ayurvedic principles. Here are some goals associated with this department:
+o	Study of Disease Etiology: The department aims to study the etiology (causes) of diseases according to Ayurveda. This includes understanding the role of imbalances in doshas (biological humors), dhatus (tissues), and malas (waste products) in the manifestation of diseases.
+o	Diagnostic Techniques: Training students and practitioners in various diagnostic methods described in Ayurvedic texts, such as inspection (darshan), palpation (sparsha), percussion (akriti), and interrogation (prashna). This includes both traditional diagnostic methods and modern diagnostic tools.
+o	Understanding Pathology: Studying the pathological processes described in Ayurvedic texts, including the stages of disease progression and the involvement of various organs and systems in disease manifestation.
+o	Treatment Principles: Teaching the principles of treatment (Chikitsa) according to Ayurveda, including the use of diet and lifestyle modifications, herbal medicines, detoxification therapies (Panchakarma), and rejuvenation therapies (Rasayana) for managing diseases.
+o	Research on Disease Management: Conducting research to explore the efficacy and safety of Ayurvedic treatments for various diseases. This includes clinical trials, observational studies, and meta-analyses to generate evidence-based recommendations for disease management.
+o	Integration with Modern Medicine: Exploring opportunities for integrating Ayurvedic diagnostic and treatment methods with modern medical practices to provide holistic healthcare solutions.
+o	Education and Training: Providing education and training to students and practitioners in the field of Rog-Nidan Evam Vikriti Vigyan, ensuring they have a thorough understanding of Ayurvedic diagnostic principles and disease management strategies.
+o	Promotion of Awareness: Promoting awareness and appreciation of Ayurvedic diagnostic and treatment principles among healthcare professionals, policymakers, and the general public.
+o	Overall, the Department of Rog-Nidan Evam Vikriti Vigyan plays a crucial role in advancing the understanding and management of diseases according to Ayurvedic principles, contributing to both education and research in the field of traditional medicine.
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agad Tantra Avum Vidhi Vaidyaka</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    o	The Department of Agad Tantra Avum Vidhi Vaidyaka is a significant part of Ayurvedic education and research institutions. This department focuses on toxicology, forensic medicine, and medical jurisprudence within the framework of Ayurveda. Here are some goals associated with this department:
+                    o	Study of Toxicology: The department aims to study and understand the toxicological principles according to Ayurveda. This includes the classification of toxins, their sources, properties, effects on the body, and methods of detoxification (Shodhana).
+                    o	Forensic Medicine: Training students and practitioners in the principles of forensic medicine as described in Ayurvedic texts. This includes understanding methods of forensic examination, post-mortem procedures, and the application of Ayurvedic principles in legal cases.
+                    o	Medical Jurisprudence: Providing education on medical jurisprudence and legal aspects of healthcare practice. This includes understanding medical ethics, laws related to healthcare, and the role of healthcare professionals in legal proceedings.
+                    o	Poison Management: Developing expertise in the management of poisoning cases, including emergency care, antidote administration, and long-term rehabilitation. This involves training healthcare professionals to identify and manage various types of poisonings effectively.
+                    o	Research on Toxic Substances: Conducting research to explore the toxicological properties of substances and their effects on health. This includes studying the toxicity mechanisms, dose-response relationships, and preventive measures for toxic exposures.
+                    o	Preventive Strategies: Developing preventive strategies to mitigate the risks of toxic exposures in communities. This includes raising awareness about environmental toxins, promoting safe handling practices, and advocating for regulatory measures to protect public health.
+                    o	Integration with Modern Toxicology: Integrating Ayurvedic principles of toxicology with modern toxicological sciences. This involves collaboration with toxicologists, pharmacologists, and environmental scientists to bridge the gap between traditional and modern knowledge.
+                    o	Education and Training: Providing education and training to students and practitioners in the field of Agad Tantra Avum Vidhi Vaidyaka, ensuring they have a comprehensive understanding of toxicology, forensic medicine, and medical jurisprudence.
+                    o	Overall, the Department of Agad Tantra Avum Vidhi Vaidyaka plays a crucial role in advancing knowledge and expertise in toxicology, forensic medicine, and medical jurisprudence within the framework of Ayurveda, contributing to both education and research in the field of traditional medicine.
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Rasashastra and Bhaishajya Kalpana</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    The Department of Rasashastra and Bhaishajya Kalpana is a significant part of Ayurvedic education and research institutions. This department focuses on the preparation, properties, and therapeutic uses of mineral, metal, and herbal formulations in Ayurveda. Here are some goals associated with this department:
+o	Study of Rasashastra: Rasashastra deals with the preparation, properties, and uses of metals, minerals, and their compounds in Ayurveda. The department aims to study classical texts and modern research to understand the principles and methods of Rasashastra.
+o	Study of Bhaishajya Kalpana: Bhaishajya Kalpana involves the pharmaceutical aspects of Ayurveda, including the preparation, preservation, and formulation of herbal medicines. The department focuses on traditional methods and modern techniques for the preparation of Ayurvedic formulations.
+o	Quality Control and Standardization: Ensuring the quality, safety, and efficacy of Ayurvedic formulations is crucial. The department conducts research on quality control parameters and standardization techniques for Ayurvedic medicines to meet regulatory requirements and ensure patient safety.
+o	Research and Development: The department conducts research to explore the pharmacological properties and therapeutic potential of Ayurvedic formulations. This includes studying the bioavailability, pharmacokinetics, and pharmacodynamics of herbal and mineral medicines.
+o	Integration with Modern Pharmacy: Integrating traditional knowledge with modern pharmacy practices is essential. The department collaborates with pharmaceutical experts to incorporate modern techniques such as chromatography, spectroscopy, and nanotechnology into Ayurvedic pharmaceuticals.
+o	Education and Training: Providing education and training to students in the field of Rasashastra and Bhaishajya Kalpana, ensuring they have a thorough understanding of traditional and modern pharmaceutical sciences.
+o	Promotion of Awareness: Promoting awareness and appreciation of Ayurvedic pharmaceutical knowledge among healthcare professionals, policymakers, and the general public.
+o	Overall, the Department of Rasashastra and Bhaishajya Kalpana plays a crucial role in advancing the pharmaceutical aspects of Ayurveda, ensuring the quality, safety, and efficacy of Ayurvedic medicines, and integrating traditional knowledge with modern pharmaceutical sciences.
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Back to Top -->
@@ -622,10 +704,10 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../Ayurvedic/lib/wow/wow.min.js"></script>
+    <script src="../Ayurvedic/lib/easing/easing.min.js"></script>
+    <script src="../Ayurvedic/lib/waypoints/waypoints.min.js"></script>
+    <script src="../Ayurvedic/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="../Ayurvedic/js/main.js"></script>
