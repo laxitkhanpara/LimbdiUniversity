@@ -2685,6 +2685,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 
 .single-popular-carusel {
+    background: #5c5c5c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     /* margin: auto; */
 
@@ -2715,7 +2716,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-popular-carusel .details {
     padding-inline: 20px;
     padding-block: 5px;
-
+    color: #f07217;
 }
 
 .single-popular-carusel .thumb {
@@ -2771,6 +2772,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 576px) {
     .single-popular-carusel {
         margin: 15px
+        
     }
 }
 
