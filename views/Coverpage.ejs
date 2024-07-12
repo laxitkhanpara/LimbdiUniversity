@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: slategrey;
+            background-image: url(img/bgimg.jpg);
             margin: 0;
             padding: 0;
         }
@@ -27,21 +27,23 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            margin-left: 1000px;
+            flex-direction: column;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             flex-wrap: wrap;
         }
 
         .carousel {
-            flex: 0 0 calc(25% - 20px);
-            height: 150px;
+            align-items: center;
+            display: inline;
+            width: 300px;
+            margin-top: 10px;
+            margin-left: 100px;
+            height: 130px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 225px;
-            margin-bottom: 20px;
             transition: transform 0.3s ease;
             /* Add hover transition */
         }
